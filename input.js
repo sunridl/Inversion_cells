@@ -31,7 +31,7 @@ var setcell_cell_click_handler = function(e) {
         $('#setcell').addClass('cell-selected');   
         game.gamemode = 'set';
     }
-    console.log("setcell");
+    //console.log("setcell");
 };
 
 var restart_cell_click_handler = function(e) {
