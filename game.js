@@ -36,8 +36,9 @@ var game = {
             this.change_cell_with_check(row + 1, column);
             this.change_cell_with_check(row, column - 1);
             this.change_cell_with_check(row, column + 1);            
+            this.steps += 1;
         }
-        this.steps += 1;
+        
         gui.game_render(this);
     },
 

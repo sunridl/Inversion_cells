@@ -3,13 +3,8 @@ var gui = {
     table: null,
 
     make_panel : function(game) {
-        var code = '<table">\n';
-        code += "  <tr>\n";
-        code += '    <td id="steps" class="game-steps">Сделано шагов: '+ game.steps +'</td>\n';
-        code += "  </tr>\n";
-        code += "</table>";
-        code += "<br>";
-        code += "<br>";
+        var code = '<div id="steps" class="game-steps">Сделано шагов: '+ game.steps +'</div>\n';
+        code += '<br>';
         return code;
     },
 
@@ -62,9 +57,7 @@ var gui = {
     },
 
     game_render : function(game) {
-        console.log(game.steps);
-        $("#steps").text('Steps: ' + game.steps);
-
+        $("#steps").text('Сделано шагов: ' + game.steps);
         for (var i = 0; i < game.field_size; ++i) {
             for (var j = 0; j < game.field_size; ++j) {
                 $(this.table[i][j]).attr('class', 'game-cell cell-' + game.scene[i][j]);
