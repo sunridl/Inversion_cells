@@ -39,11 +39,11 @@ var game = {
 
     invert_field: function () {
         for (var i = 0; i < this.field_size; ++i) {
-            this.scene[i] = new Array(this.field_size);
             for (var j = 0; j < this.field_size; ++j) {
-                change_cell(i, j);
+                this.change_cell(i, j);
             }
         }
+        gui.game_render(this);
     },
 
     restart: function () {

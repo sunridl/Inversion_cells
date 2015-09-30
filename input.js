@@ -6,6 +6,16 @@ var cell_click_handler = function(e) {
     var col = that.data('col');
     
     game.make_step(row, col);
+
+    //}
+};
+
+var invert_cell_click_handler = function(e) {
+    e.preventDefault();
+    var that = $(this);
+
+    game.invert_field();
+
     //}
 };
 
