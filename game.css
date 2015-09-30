@@ -1,0 +1,42 @@
+.game-field {
+    background-color: #888888;
+    table-layout: fixed;
+    width: 100px;
+    height: 100px;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.game-panel {
+    background-color: #ffa500;
+    table-layout: fixed;
+    width: 300px;
+    height: 100px;
+    font-family: Helvetica, Arial;
+    font-size: 60;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-radius: 5px;
+}
+
+.game-cell {
+    margin: 2px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    font-family: Helvetica, Arial;
+    color: #746d65;
+    border-radius: 5px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.cell-0 {
+    background-color: #000000;
+}
+
+.cell-1 {
+    background-color: #FFFFFF;
+}
