@@ -54,7 +54,6 @@ var game = {
     restart: function () {
         this.scene = new Array(this.field_size);
         this.steps = 0;
-        this.gamemode = 'play';
         for (var i = 0; i < this.field_size; ++i) {
             this.scene[i] = new Array(this.field_size);
             for (var j = 0; j < this.field_size; ++j) {
