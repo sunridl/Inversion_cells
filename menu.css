@@ -65,7 +65,5 @@
 
 .cell-selected {
     border-color: #ff0000;
-    border-width: 5px;
     border-style: solid;
-    height: 50px;
 }

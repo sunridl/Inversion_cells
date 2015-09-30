@@ -23,12 +23,15 @@ var setcell_cell_click_handler = function(e) {
     e.preventDefault();
     var that = $(this);
 
-    if ($('#setcell').hasClass('cell-celected')) {
-        $('#setcell').removeClass('cell-celected');
+    if ($('#setcell').hasClass('cell-selected')) {
+        $('#setcell').removeClass('cell-selected');
+        game.gamemode = 'play';
     }
     else {
-        $('#setcell').addClass('cell-celected');   
+        $('#setcell').addClass('cell-selected');   
+        game.gamemode = 'set';
     }
+    console.log("setcell");
 };
 
 var restart_cell_click_handler = function(e) {

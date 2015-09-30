@@ -2,10 +2,12 @@ var game = {
     scene: null,
     field_size: 3,
     steps: 0,
+    gamemode: 'play',
 
     initialize: function () {
         this.scene = new Array(this.field_size);
         this.steps = 0;
+        this.gamemode = 'play';
         for (var i = 0; i < this.field_size; ++i) {
             this.scene[i] = new Array(this.field_size);
             for (var j = 0; j < this.field_size; ++j) {
@@ -29,10 +31,12 @@ var game = {
 
     make_step: function (row, column) {
         this.change_cell_with_check(row, column);
-        this.change_cell_with_check(row - 1, column);
-        this.change_cell_with_check(row + 1, column);
-        this.change_cell_with_check(row, column - 1);
-        this.change_cell_with_check(row, column + 1);
+        if (this.gamemode == 'play') {
+            this.change_cell_with_check(row - 1, column);
+            this.change_cell_with_check(row + 1, column);
+            this.change_cell_with_check(row, column - 1);
+            this.change_cell_with_check(row, column + 1);            
+        }
         this.steps += 1;
         gui.game_render(this);
     },
@@ -49,6 +53,7 @@ var game = {
     restart: function () {
         this.scene = new Array(this.field_size);
         this.steps = 0;
+        this.gamemode = 'play';
         for (var i = 0; i < this.field_size; ++i) {
             this.scene[i] = new Array(this.field_size);
             for (var j = 0; j < this.field_size; ++j) {
