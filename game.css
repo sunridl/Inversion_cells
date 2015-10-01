@@ -10,6 +10,9 @@
     height: 100px;
     border-collapse: separate;
     border-spacing: 5px;
+    font-family: Helvetica, Arial;
+    font-size: 44px;
+    font-color: #999999;
 }
 
 .game-panel {

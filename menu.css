@@ -20,7 +20,6 @@
 .menu-item {
     overflow: hidden;
     font-family: Helvetica, Arial;
-    line-height: 40px;
     border-radius: 5px;
     text-align: center;
     color: #FFFFFF;
@@ -41,4 +40,6 @@
 .cell-selected {
     border-color: #ff0000;
     border-style: solid;
+    font-size: 38px;
+    line-height: 105px;
 }

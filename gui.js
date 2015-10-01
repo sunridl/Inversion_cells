@@ -13,7 +13,9 @@ var gui = {
         for (var i = 0; i < game.field_size; ++i) {
             code += "  <tr>\n";
             for (var j = 0; j < game.field_size; ++j) {
-                code += '    <td class="game-cell cell-'+ game.scene[i][j] +'" data-row="' + i + '" data-col="' + j + '"></td>\n';
+                code += '    <td class="game-cell cell-'+ game.scene[i][j] +
+                '" data-row="' + i + '" data-col="' + j + '">'+ 
+                String.fromCharCode(65 + i) + (j + 1) +'</td>\n';
             }
             code += "  </tr>\n";
         }
